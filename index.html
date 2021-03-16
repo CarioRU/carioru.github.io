@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Mysterious Button</title>
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $("#visible").click(function(){
+                $('#invisible1').removeClass("hide");
+                $('#invisible1').addClass("show");
+                $('#invisible2').removeClass("hide");
+                $('#invisible2').addClass("show glitch")
+            })
+        })
+    </script>
+    <script src="confetti.js"></script>
+    <header>
+       <h1 id="invisible1" class="hide" data-text="Surprise!!!">Surprise!!!</h1> 
+       <h2 id="invisible2" class="hide">Glitch</h2>
+    </header>
+    <script>
+        function sleep(ms) {
+            return new Promise(
+                resolve => setTimeout(resolve, ms)
+             );
+            }
+
+        async function delayedconfetti() {
+            confetti.start();
+            await sleep(5000);
+            confetti.stop();
+            }
+    </script>
+
+    <div class="button">
+        <button onclick="delayedconfetti()" id="visible"><span>Press Me</span></button>
+    </div>
+    
+    
+    
+</body>
+</html>

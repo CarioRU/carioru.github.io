@@ -1,0 +1,122 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+
+*{
+    margin:0;
+    padding:0;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    
+    justify-content: center;
+    align-items:center;
+    min-height: 100vh;
+    background: #f2f3f7;
+}
+header{
+    height:300px;
+    width:100%;
+    margin:0 auto;
+    padding-top:100px;
+    padding-left:auto;
+    padding-right:auto;
+}
+h1{
+    text-align: center;
+    width: 370px;
+    margin:0 auto;
+    font-size: 70px;
+    font-weight:1000;
+    text-transform: uppercase;
+    color:#f2f3f7;
+    -webkit-text-stroke: 0.3px  ;
+}
+h1::before{
+    content:attr(data-text);
+    position:absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top:100px;
+    width: 0px;
+    height:100px;
+    color:#ec4646;
+    -webkit-text-stroke: 0vw #f2f3f7 ;
+    border-right: 2px solid #ec4646;
+    overflow:hidden;
+    animation: animate 6s;
+    animation-fill-mode:forwards;
+}
+
+@keyframes animate
+{
+    0%,10%
+    {
+        width:0;
+    }
+    70%
+    {
+        width: 370px;
+        border-right: 2px solid #ec4646;
+    }
+    90%,100%
+    {
+        width:370px;
+        border:none;
+    }
+}
+button{
+    margin:auto;
+    padding:0;
+    border:none;
+    background:none;
+    outline:none;
+    position:relative;
+    display: block;
+    padding: 10px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #5a84a2;
+    font-size:18px;
+    border-radius: 40px;
+    box-shadow: -2px -2px 8px rgba(255,255,255,1),
+                -2px -2px 12px rgba(255,255,255,0.5),
+                inset 2px -2px 12px rgba(255,255,255,0.1),
+                2px 2px 8px rgba(0,0,0,0.15);
+}
+
+button:active{
+    box-shadow: inset -2px -2px 8px rgba(255,255,255,1),
+                inset -2px -2px 12px rgba(255,255,255,0.5),
+                inset 2px -2px 12px rgba(255,255,255,0.1),
+                inset 2px 2px 8px rgba(0,0,0,0.15);
+}
+
+.hide{
+    display:none;
+}
+
+.show{
+    display:block;
+}
+
+
+.glitch {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 60px;
+
+    text-shadow: 0.05em 0 0 rgba(255,0,0,.75),
+                 -0.025em -0.05em 0 rgba(0,255,0,.75),
+                 0.025em 0.05em 0 rgba(0,0,255,.75);
+    
+    
+}
+

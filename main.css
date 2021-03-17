@@ -9,6 +9,12 @@
     font-family:'Poppins', sans-serif;
 }
 
+h3{
+    text-align: center;
+    padding-top:70px;
+    font-size:40px;
+    display:none;
+}
 body{
     
     justify-content: center;
@@ -124,3 +130,11 @@ button:active{
     
 }
 
+@media(max-width:670px){
+    button{
+        display:none;
+    }
+    h3{
+        display:block;
+    }
+}
